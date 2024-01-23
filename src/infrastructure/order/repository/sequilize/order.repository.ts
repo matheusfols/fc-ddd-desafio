@@ -62,14 +62,6 @@ export default class OrderRepository {
     )
   }
 
-  async deleteOrderItem(orderItemId: string): Promise<void> {
-    await OrderItemModel.destroy({
-      where: {
-        id: orderItemId,
-      }
-    })
-  }
-
   async find(id: string): Promise<Order> {
     let orderModel;
     try {
